@@ -1,13 +1,14 @@
 // 引入 Express
 const express = require('express');
 const app = express();
-
+const cors = require('cors');
 // 设置端口
-const PORT = 3000;
+const PORT = 4000;
 
 // 配置 JSON 返回格式
 app.use(express.json());
-
+// 配置跨域
+app.use(cors());
 // 定义一个接口
 app.get('/api/data', (req, res) => {
     // 返回 JSON 数据
